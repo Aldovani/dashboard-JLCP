@@ -1,93 +1,138 @@
 html,
 body {
-  font-family: "Inter" serif;
+  font-family: "Inter", serif;
   background: #0b131f;
 }
 
-
-.header {
+.card {
+  padding: 40px;
+  width: 500px;
+  height: 255px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
   background: #121a26;
-  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.card header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  padding: 24px 0;
-  gap: 40px;
 }
-
-.header .divider {
-  width: 4px;
-  height: 32px;
-
-  background: linear-gradient(1.39deg, #e8df38 -66.39%, #41d882 125.92%);
-}
-
-.header span {
-  font-family: Inter;
+.card header h3 {
   font-size: 24px;
-  font-weight: 700;
-  line-height: 31.2px;
-  text-align: center;
+  font-weight: 800;
+  line-height: 130%;
   color: #fff;
 }
+.card header > div {
+  display: flex;
+  gap: 12px;
+}
+.card header div span {
+  font-size: 14px;
+}
+.card header div span:first-child {
+  color: #fff;
+}
+.card header div span:last-child {
+  color: rgba(255, 255, 255, 0.5);
+}
 
-.battery {
-  border: 1px solid rgba(255, 255, 255, 0.3);
+.card .content {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
   position: relative;
-  width: 156px;
+  z-index: 1;
+}
+
+.card .content .item {
+  width: fit-content;
+  background: #1f2632;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
-  justify-content: start;
-  padding: 20px 0 20px 30px;
-  border-radius: 6px;
+  gap: 4px;
+  padding: 12px;
+  border-radius: 100px;
 }
-.battery img{
-  user-select: none;
+.card .content .item img {
+  width: 24px;
+  height: 24px;
 }
-.battery .elipse{
-  background: rgba(58, 235, 105, 1);
-position: absolute;
-  width: 67.17px;
-height: 67.17px;
-border-radius: 100%;
-top: 97.5px;
-left: 2.61px;
-gap: 0px;
-filter: blur(86px);
-bottom: 10px;
-left: 32px;
-
-z-index: 1;
+.card .content .item h4 {
+  font-weight: 700;
+  color: #fff;
+}
+.card .content .item span {
+  background: linear-gradient(1.39deg, #e8df38 -66.39%, #41d882 125.92%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.infos {
+.card .elipse {
+  pointer-events: none;
+  top: calc(100% + 72px);
+  left: 250px;
   position: absolute;
-  left: 100%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  width: 750px;
+  height: 750px;
+  mix-blend-mode: plus-lighter;
+  border-radius: 100%;
+  background-color: rgba(116, 217, 96, 1);
+  filter: blur(150px);
+}
 
+.card .texture {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  background: url("/assets/texture.png");
+}
+
+.card-circle-progress{
+  padding: 50px 48px;
+  width: fit-content;
+  border: 1px solid rgba(255, 255, 255,0.15);
+  border-radius: 10px;
+  background: #121A26;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  align-items: center;
+  gap: 20px;
 }
-.container-info {
-  border-radius: 6px;
-  padding: 1px;
-  height: 32px;
-  background: linear-gradient(1.39deg, #e8df38 -66.39%, #41d882 125.92%);
+.card-circle-progress .circle-progress{
+  stroke-dashoffset: calc((var(--progress)* 9.4) - 940);
 }
-.info {
-  border-radius: 6px;
-  background: rgba(44, 52, 45, 1);
-  padding: 7px;
-  gap: 4px;
+.card-circle-progress .container{
+  position: relative;
+}
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
   display: flex;
+  gap: 20px;
+  flex-direction: column;
 
-  font-family: Inter;
-font-size: 12px;
-font-weight: 600;
-line-height: 15.6px;
-text-align: center;
-color: #fff;
+}
+.card-circle-progress .center h4{
+  font-size: 40px;
+  color: #fff;
+}
+.card-circle-progress h3{
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.60);
+}
+.card-circle-progress span{
+  color: rgba(255, 255, 255);
 }

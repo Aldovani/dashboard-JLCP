@@ -14,30 +14,91 @@
     <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
-    <!-- <div class="elipse"></div> -->
-    <header class="header">
-      <img src="assets/logo.svg" alt="Logo" />
-      <div class="divider"></div>
-      <span>Firewall - Fortigate</span>
-    </header>
+    <div class="card">
+      <header>
+        <h3>PVE-101-JLCP</h3>
 
-    <div class="battery">
-      <img src="assets/bateria.png" alt="" />
-      <div class="elipse"></div>
-      <div class="infos">
-        <div class="container-info">
-          <div class="info">
-            <img src="assets/bar-chart-box-ai-line.svg" alt="" />
-            <span>100%</span>
-          </div>
+        <div>
+          <div><span>UP:</span> <span>139 MB/S</span></div>
+          <div><span>DOWN:</span> <span>139 MB/S</span></div>
         </div>
-        <div class="container-info">
-          <div class="info">
-            <img src="assets/speed-up-line.svg" alt="" />
-            <span>212v</span>
-          </div>
+      </header>
+
+      <div class="content">
+        <div class="item">
+          <img src="assets/Circuitry.svg" alt="" />
+          <h4>CPU: <span>13.56%</span></h4>
+        </div>
+        <div class="item">
+          <img src="assets/Memory.svg" alt="" />
+          <h4>MEMÓRIA: <span>13.56%</span></h4>
+        </div>
+        <div class="item">
+          <img src="assets/Memory.svg" alt="" />
+          <h4>UPTIME: <span>05D 14H 23M</span></h4>
+        </div>
+        <div class="item">
+          <img src="assets/Memory.svg" alt="" />
+          <h4>SPACE: <span>52GB</span></h4>
         </div>
       </div>
+      <div class="elipse"></div>
+      <div class="texture"></div>
     </div>
+
+    <div class="card-circle-progress">
+      <h3>SPACE: USED IN <span>%</span></h3>
+
+      <div class="container">
+        <div class="center">
+          <img src="assets/space.svg" alt="" />
+          <h4>16%</h4>
+        </div>
+        <svg
+          width="300"
+          height="300"
+          viewBox="-31.25 -31.25 312.5 312.5"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          style="transform: rotate(-90deg)"
+        >
+          <circle
+            r="150"
+            cx="125"
+            cy="125"
+            fill="transparent"
+            stroke="#ffffff"
+            stroke-width="5"
+            stroke-opacity="0.05"
+          ></circle>
+          <circle
+            class="circle-progress"
+            r="150"
+            cx="125"
+            cy="125"
+            stroke="url(#paint0_linear_3820_3742)"
+            stroke-width="5"
+            stroke-linecap="round"
+            fill="transparent"
+            stroke-dasharray="940px"
+          ></circle>
+          <defs>
+            <linearGradient
+              id="paint0_linear_3820_3742"
+              x1="338.789"
+              y1="7530.29"
+              x2="-263.108"
+              y2="7515.68"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#E8DF38" />
+              <stop offset="1" stop-color="#41D882" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
   </body>
 </html>
